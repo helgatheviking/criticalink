@@ -1,0 +1,188 @@
+
+/* Menu Layout Mods
+-------------------------------------------------------------- */
+.site-branding{
+    max-width: 70%;
+    float: left;
+}
+
+.site-navigation {
+    max-width: 30%;
+    float: right;
+}
+
+/* Menu Toggle
+-------------------------------------------------------------- */
+.menu-toggle{ 
+	color: initial;
+	padding: 0;
+	background: transparent;
+	text-align: right;
+	margin-top: 12px;
+	margin-top: 1.2rem;
+
+	&:before {
+	    padding-right: 0;
+	    content: "";
+	}
+	&:after {
+	    padding-left: 6px;
+	    padding-left: 0.6rem;
+	    font-family: FontAwesome;
+	    content: "\f0c9";
+	}
+}
+
+.offcanvas-open .menu-toggle:after {
+    content: "\f00d";	
+}
+
+
+
+
+/* Off-Canvas Menu
+-------------------------------------------------------------- */
+
+// Colors
+$sidr-background : #f8f8f8;
+$sidr-background-shadow-color : #ebebeb;
+$sidr-text-color: #333;
+$sidr-menu-color: #888888;
+$sidr-menu-color-hover: $action-color;
+
+.sidr {
+    /* Default Settings */
+    display: none;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    z-index: 999999;
+    width: 260px;
+    overflow-x: none;
+    overflow-y: auto;
+
+    .sidr-inner {
+        padding: 0 0 15px;
+
+        > p {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+    }
+
+    &.right {
+        left: auto;
+        right: -260px;
+    }
+
+    &.left {
+        left: -260px;
+        right: auto;
+    }
+
+    /* Theme Settings */
+    background: $sidr-background;
+    color: $sidr-text-color;
+
+    ul {
+        display: block;
+        margin: 0 0 15px;
+        padding: 0;
+        border-top: 1px solid darken($sidr-background, 10%);
+        border-bottom: 1px solid lighten($sidr-background, 10%);
+
+        li {
+            display: block;
+            margin: 0;
+            line-height: 48px;
+            border-top: 1px solid lighten($sidr-background, 10%);
+            border-bottom: 1px solid darken($sidr-background, 10%);
+
+            &:hover,
+            &.active,
+            &.sidr-class-active {
+                border-top: none;
+                line-height: 49px;
+
+                > a, > span {
+                    color: $sidr-menu-color-hover
+                }
+            }
+
+            &.sidr-class-menu-item-has-children {
+
+            	position: relative;
+            	
+            	> a { padding-right: 50px;
+            			padding-right: 5rem; }
+
+            	.sidr-class-dropdown-toggle {
+
+            		color: $sidr-menu-color;
+
+            		cursor: pointer;
+            		position: absolute;
+            		right: 0;
+            		top: 0;
+            		width: 50px;
+            		width: 5rem;
+
+            		&:before {
+					    padding-left: 6px;
+					    padding-left: 0.6rem;
+					    font-family: FontAwesome;
+					    content: "\f196";
+            		}
+
+            		&:hover {
+            			color: $sidr-menu-color-hover;
+            		}
+
+            	}
+
+            	&.open .sidr-class-dropdown-toggle:before {
+            		content: "\f147";
+            	}
+            }
+
+            a, span {
+                padding: 0 15px;
+                display: block;
+                text-decoration: none;
+                color: $sidr-menu-color;
+                @include caps;
+            }
+
+            ul {
+            	display: none;
+                border-bottom: none;
+                margin: 0;
+                li {
+                    line-height: 40px;
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+
+                    &:hover,
+                    &.active,
+                    &.sidr-class-active {
+                        border-top: none;
+                        line-height: 41px;
+
+                        > a, > span {
+                            
+                        }
+                    }
+
+                    a, span {
+                        color: rgba($sidr-text-color, .8);
+                        padding-left: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+}

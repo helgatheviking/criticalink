@@ -1,0 +1,26 @@
+{
+  "name": "criticalink",
+  "version": "1.1.0",
+  "authors": [
+    "Kathy Darling <helgatheviking@gmail.com>"
+  ],
+  "description": "custom child theme of Make",
+  "main": "style.css",
+  "keywords": [
+    "theme"
+  ],
+  "license": "GPL-3",
+  "homepage": "http://www.criticalink.org",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fastclick": "~1.0.6",
+    "jquery.fitvids": "fitvids#~1.1.0",
+    "sidr": "~1.2.1"
+  }
+}

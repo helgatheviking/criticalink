@@ -1,0 +1,56 @@
+/* Common Editor Styles
+-------------------------------------------------------------- */
+
+.accent-color { color: $action-color; }
+.alt-color { color: #ccc; }
+
+.message-box {
+	border: 1px solid #999;
+	color: #999;
+	background: #ccc;
+	padding: 1em;
+	margin-bottom: 1.5em;
+}
+
+.warning-box {
+	border: 1px solid $action-color;
+	color: $action-color;
+	background: pink
+}
+
+.inverted {
+	background: #000;
+	background: rgba( 0, 0, 0, .3 );
+	color: #FFF;
+}
+em .inverted{
+	font-family: $serif;
+}
+
+.button {
+	@include caps;
+	border: 2px solid;
+	padding: .5em 1em;
+	text-decoration: none !important;
+	transition: background-color 0.5s ease;
+
+	&.accent-color{
+		background-color: $action-color;
+		border-color: $action-color;
+		color: #FFF;
+		
+		&:hover{
+			background-color: darken( $action-color, 10% );
+			border-color: darken( $action-color, 10% );
+		}
+	}
+
+	&.alt-color{
+		border-color: #FFF;
+		&:hover{
+			background-color: darken( $action-color, 10% );
+			border-color: darken( $action-color, 10% );
+			color: #FFF;
+		}
+	}
+}

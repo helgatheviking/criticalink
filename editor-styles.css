@@ -1,0 +1,46 @@
+.accent-color { color: #999; }
+.alt-color { color: #ccc; }
+
+.message-box {
+	border: 1px solid #999;
+	color: #999;
+	background: #ccc;
+	padding: 1em;
+	margin-bottom: 1.5em;
+}
+
+.warning-box {
+	border: 1px solid red;
+	color: red;
+	background: pink
+}
+
+.inverted {
+	background: rgba( 0, 0, 0, .4 );
+	color: #FFF;
+}
+
+.button {
+	border: 2px solid;
+	padding: .5em 1em;
+	text-decoration: none !important;
+}
+.button.accent-color{
+	background-color: #999;
+	border-color: #999;
+	color: #FFF;
+}
+.button.accent-color:hover{
+	background-color: #666;
+	border-color: #666;
+}
+.button.alt-color:hover{
+	border-color: #CCC;
+}
+.button.alt-color:hover{
+	background-color: #CCC;
+	border-color: #CCC;
+	color: #FFF;
+}
+
+

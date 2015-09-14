@@ -1,0 +1,97 @@
+/* =Mixins/Functions
+-------------------------------------------------------------- */
+/**
+ * clearfix
+ */
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+/**
+ * PX to Rem Sizing
+ *
+ * How to use
+ * @include fontSize(20px);
+ *
+ * Ouputs —
+ * font-size: 20px;
+ * font-size: 1.25rem;
+ */
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+@mixin fontSize($size) {
+  font-size: $size; //Fallback in px
+  font-size: calculateRem($size);
+}
+
+/* all caps */
+@mixin caps() {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+
+/* =Genericons and Dashicons
+-------------------------------------------------------------- */
+@mixin dashicons {
+	color: $icon-color;
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 16px/1 'Dashicons';
+	vertical-align: middle;
+}
+
+@mixin genericons {
+	color: $icon-color;
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 16px/1 'Genericons';
+	vertical-align: middle;
+}
+
+@mixin giant() { 
+	@include fontSize(60px);
+	margin: 0 0 0.433em; 
+	line-height: 1.3em; /* 78px */ 
+	top: 10px; 
+}
+@mixin huge() { 
+	@include fontSize(48px);
+	margin: 0 0 0.5417em; 
+	line-height: 1.0833em; /* 52px */ 
+}
+
+@mixin small() { 
+	@include fontSize(12px);
+	margin: 0 0 2.1667em; 
+	font-size: 0.75em; /* 12px */ 
+	line-height: 2.1667em; /* 26px */ 
+}
+
+@mixin pattern-overlay() {
+   position: relative;
+    z-index: 1;
+
+    &:after {
+	    content: '';
+	    display: block;
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	    z-index: 0;
+	    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGklEQVQIW2NkYGDwYWBg2AKjGRnQAEgAvwoAoa4EBbmp+kEAAAAASUVORK5CYII=);
+	}
+}
+
+
+

@@ -1,0 +1,388 @@
+@charset "UTF-8";
+/**
+ * Theme Name:  CriticaLink
+ * Theme URI:   https://thethemefoundry.com/make/
+ * Author:      Kathy Darling
+ * Author URI:  http://www.kathyisawesome.com
+ * Description: A custom child theme with Beaver Builder support
+ * Version:     1.1.0
+ * License:     GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: criticalink
+ * Domain Path: /languages/
+ * Tags:        black, blue, green, gray, orange, red, white, yellow, dark, light, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, fixed-layout, fluid-layout, responsive-layout, buddypress, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, photoblogging
+ * Template:	make
+ * 
+ * Make WordPress Theme, Copyright 2014 The Theme Foundry
+ * Make is distributed under the terms of the GNU GPL
+ *
+ * Generated with sass from scss/style.scss
+ */
+/* =Variables
+-------------------------------------------------------------- */
+/* =Mixins/Functions
+-------------------------------------------------------------- */
+/**
+ * clearfix
+ */
+/**
+ * PX to Rem Sizing
+ *
+ * How to use
+ * @include fontSize(20px);
+ *
+ * Ouputs ΓÇö
+ * font-size: 20px;
+ * font-size: 1.25rem;
+ */
+/* all caps */
+/* =Genericons and Dashicons
+-------------------------------------------------------------- */
+/* Common Editor Styles
+-------------------------------------------------------------- */
+.accent-color {
+  color: #d31a20;
+}
+
+.alt-color {
+  color: #ccc;
+}
+
+.message-box {
+  border: 1px solid #999;
+  color: #999;
+  background: #ccc;
+  padding: 1em;
+  margin-bottom: 1.5em;
+}
+
+.warning-box {
+  border: 1px solid #d31a20;
+  color: #d31a20;
+  background: pink;
+}
+
+.inverted {
+  background: #000;
+  background: rgba(0, 0, 0, 0.3);
+  color: #FFF;
+}
+
+em .inverted {
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+.button, .ttfmake-button, button, input[type="button"], input[type="reset"], input[type="submit"] {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 2px solid;
+  padding: .5em 1em;
+  text-decoration: none !important;
+  transition: background-color 0.5s ease;
+}
+.button.accent-color, .accent-color.ttfmake-button, button.accent-color, input.accent-color[type="button"], input.accent-color[type="reset"], input.accent-color[type="submit"] {
+  background-color: #d31a20;
+  border-color: #d31a20;
+  color: #FFF;
+}
+.button.accent-color:hover, .accent-color.ttfmake-button:hover, button.accent-color:hover, input.accent-color[type="button"]:hover, input.accent-color[type="reset"]:hover, input.accent-color[type="submit"]:hover {
+  background-color: #a61419;
+  border-color: #a61419;
+}
+.button.alt-color, .alt-color.ttfmake-button, button.alt-color, input.alt-color[type="button"], input.alt-color[type="reset"], input.alt-color[type="submit"] {
+  border-color: #FFF;
+}
+.button.alt-color:hover, .alt-color.ttfmake-button:hover, button.alt-color:hover, input.alt-color[type="button"]:hover, input.alt-color[type="reset"]:hover, input.alt-color[type="submit"]:hover {
+  background-color: #a61419;
+  border-color: #a61419;
+  color: #FFF;
+}
+
+/* Menu Layout Mods
+-------------------------------------------------------------- */
+.site-branding {
+  max-width: 70%;
+  float: left;
+}
+
+.site-navigation {
+  max-width: 30%;
+  float: right;
+}
+
+/* Menu Toggle
+-------------------------------------------------------------- */
+.menu-toggle {
+  color: initial;
+  padding: 0;
+  background: transparent;
+  text-align: right;
+  margin-top: 12px;
+  margin-top: 1.2rem;
+}
+.menu-toggle:before {
+  padding-right: 0;
+  content: "";
+}
+.menu-toggle:after {
+  padding-left: 6px;
+  padding-left: 0.6rem;
+  font-family: FontAwesome;
+  content: "\f0c9";
+}
+
+.offcanvas-open .menu-toggle:after {
+  content: "\f00d";
+}
+
+/* Off-Canvas Menu
+-------------------------------------------------------------- */
+.sidr {
+  /* Default Settings */
+  display: none;
+  position: absolute;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  z-index: 999999;
+  width: 260px;
+  overflow-x: none;
+  overflow-y: auto;
+  /* Theme Settings */
+  background: #f8f8f8;
+  color: #333;
+}
+.sidr .sidr-inner {
+  padding: 0 0 15px;
+}
+.sidr .sidr-inner > p {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.sidr.right {
+  left: auto;
+  right: -260px;
+}
+.sidr.left {
+  left: -260px;
+  right: auto;
+}
+.sidr ul {
+  display: block;
+  margin: 0 0 15px;
+  padding: 0;
+  border-top: 1px solid #dfdfdf;
+  border-bottom: 1px solid white;
+}
+.sidr ul li {
+  display: block;
+  margin: 0;
+  line-height: 48px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid #dfdfdf;
+}
+.sidr ul li:hover, .sidr ul li.active, .sidr ul li.sidr-class-active {
+  border-top: none;
+  line-height: 49px;
+}
+.sidr ul li:hover > a, .sidr ul li:hover > span, .sidr ul li.active > a, .sidr ul li.active > span, .sidr ul li.sidr-class-active > a, .sidr ul li.sidr-class-active > span {
+  color: #d31a20;
+}
+.sidr ul li.sidr-class-menu-item-has-children {
+  position: relative;
+}
+.sidr ul li.sidr-class-menu-item-has-children > a {
+  padding-right: 50px;
+  padding-right: 5rem;
+}
+.sidr ul li.sidr-class-menu-item-has-children .sidr-class-dropdown-toggle {
+  color: #888888;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  width: 5rem;
+}
+.sidr ul li.sidr-class-menu-item-has-children .sidr-class-dropdown-toggle:before {
+  padding-left: 6px;
+  padding-left: 0.6rem;
+  font-family: FontAwesome;
+  content: "\f196";
+}
+.sidr ul li.sidr-class-menu-item-has-children .sidr-class-dropdown-toggle:hover {
+  color: #d31a20;
+}
+.sidr ul li.sidr-class-menu-item-has-children.open .sidr-class-dropdown-toggle:before {
+  content: "\f147";
+}
+.sidr ul li a, .sidr ul li span {
+  padding: 0 15px;
+  display: block;
+  text-decoration: none;
+  color: #888888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.sidr ul li ul {
+  display: none;
+  border-bottom: none;
+  margin: 0;
+}
+.sidr ul li ul li {
+  line-height: 40px;
+}
+.sidr ul li ul li:last-child {
+  border-bottom: none;
+}
+.sidr ul li ul li:hover, .sidr ul li ul li.active, .sidr ul li ul li.sidr-class-active {
+  border-top: none;
+  line-height: 41px;
+}
+.sidr ul li ul li a, .sidr ul li ul li span {
+  color: rgba(51, 51, 51, 0.8);
+  padding-left: 30px;
+}
+
+/* **********************************************
+   Features by WooThemes
+ ************************************************/
+.widget_woothemes_features .feature {
+  float: left;
+  margin-right: 4%;
+}
+.widget_woothemes_features .columns-2 .feature {
+  width: 48%;
+}
+.widget_woothemes_features .columns-3 .feature {
+  width: 30.66%;
+}
+.widget_woothemes_features .columns-4 .feature {
+  width: 22%;
+}
+.widget_woothemes_features .columns-5 .feature {
+  width: 16.8%;
+}
+.widget_woothemes_features .columns-6 .feature {
+  width: 13.33%;
+}
+.widget_woothemes_features .features .first {
+  clear: both;
+}
+.widget_woothemes_features .features .last {
+  margin-right: 0;
+}
+
+/* **********************************************
+   Beaver Builder
+ ************************************************/
+.fl-row.pattern-overlay .fl-row-content-wrap {
+  position: relative;
+  z-index: 1;
+}
+.fl-row.pattern-overlay .fl-row-content-wrap:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGklEQVQIW2NkYGDwYWBg2AKjGRnQAEgAvwoAoa4EBbmp+kEAAAAASUVORK5CYII=);
+}
+
+.fl-row-fixed-width {
+  max-width: 1100px;
+}
+
+.site-header-main {
+  padding: 22px 0 22px;
+  padding: 2.2rem 0 2.2rem;
+}
+
+.site-navigation .menu li a {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+#site-banner {
+  clear: both;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  position: relative;
+  z-index: 1;
+}
+#site-banner:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGklEQVQIW2NkYGDwYWBg2AKjGRnQAEgAvwoAoa4EBbmp+kEAAAAASUVORK5CYII=);
+}
+
+.page .has-post-thumbnail {
+  margin-top: -5rem;
+  margin-left: -2rem;
+  padding-left: 2rem;
+  background: white;
+  padding-top: 1rem;
+}
+
+@media screen and (min-width: 800px) {
+  .site-branding {
+    max-width: 30%;
+  }
+
+  .site-navigation {
+    max-width: 70%;
+  }
+
+  .site-header-main {
+    padding-bottom: 0;
+  }
+
+  .footer-text {
+    float: left;
+  }
+
+  #site-banner {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 40px;
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 30px;
+    font-size: 1.875rem;
+  }
+}
+.site-navigation .menu li a, .site-navigation .nav-menu li a {
+  padding: 11px 16px;
+  padding: 1.1rem 1.6rem;
+}
+.site-navigation .menu li.button, .site-navigation .menu li.ttfmake-button, .site-navigation .nav-menu li.button, .site-navigation .nav-menu li.ttfmake-button {
+  padding: 0;
+}
+
+.entry-header .entry-author {
+  margin-bottom: 22px;
+  margin-bottom: 2.2rem;
+}
+
+.post_format-post-format-link {
+  padding-bottom: 50px;
+  padding-bottom: 5rem;
+}
+
+/*# sourceMappingURL=style.css.map */

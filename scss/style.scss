@@ -1,0 +1,114 @@
+/**
+ * Theme Name:  CriticaLink
+ * Theme URI:   https://thethemefoundry.com/make/
+ * Author:      Kathy Darling
+ * Author URI:  http://www.kathyisawesome.com
+ * Description: A custom child theme with Beaver Builder support
+ * Version:     1.1.0
+ * License:     GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: criticalink
+ * Domain Path: /languages/
+ * Tags:        black, blue, green, gray, orange, red, white, yellow, dark, light, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, fixed-layout, fluid-layout, responsive-layout, buddypress, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, photoblogging
+ * Template:	make
+ * 
+ * Make WordPress Theme, Copyright 2014 The Theme Foundry
+ * Make is distributed under the terms of the GNU GPL
+ *
+ * Generated with sass from scss/style.scss
+ */
+
+@import "variables";
+@import "mixins";
+//@import "typography";
+@import "editor-styles";
+@import "sidrnav";
+
+
+@import "features_by_woothemes";
+@import "beaver_builder";
+
+//@import "no-js";
+
+// Main Header and Menus
+.site-header-main {
+    padding: 22px 0 22px;
+    padding: 2.2rem 0 2.2rem;
+}
+.site-navigation .menu li a {
+	@include caps;
+	font-weight: bold;
+}
+
+// featured thumbnail banner
+#site-banner{
+	clear: both;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 200px;
+	@include pattern-overlay;
+}
+
+.page .has-post-thumbnail {
+	margin-top: -5rem;
+    margin-left: -2rem;
+    padding-left: 2rem;
+    background: white;
+    padding-top: 1rem;
+}
+
+// fixes for big screens
+@media screen and (min-width: 800px){
+	.site-branding {
+	    max-width: 30%;
+	}
+	.site-navigation {
+	    max-width: 70%;
+	}
+	.site-header-main {
+	    padding-bottom: 0;
+	}
+	.footer-text {
+		float: left;
+	}
+
+	#site-banner {
+		height: 400px;
+	}
+}
+
+// fixes for small screens
+@media screen and (max-width: 800px){
+	h1 {
+		@include fontSize(40px);
+	}
+	h2 {
+		@include fontSize(30px);
+	}
+}
+
+// forms and buttons
+.ttfmake-button, button, input[type="button"], input[type="reset"], input[type="submit"]{
+	@extend .button;
+}
+
+.site-navigation .menu li, .site-navigation .nav-menu li {
+	a { 
+	   	padding: 11px 16px;
+	   	padding: 1.1rem 1.6rem;
+	}
+	&.button {
+	  	padding: 0;
+	}
+}
+
+// blog archive
+.entry-header .entry-author {
+    margin-bottom: 22px;
+    margin-bottom: 2.2rem;
+}
+
+.post_format-post-format-link{
+	padding-bottom: 50px;
+    padding-bottom: 5rem;
+}

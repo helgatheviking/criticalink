@@ -1,0 +1,14 @@
+/* **********************************************
+   Features by WooThemes
+ ************************************************/
+
+.widget_woothemes_features {
+	.feature { float: left; margin-right: 4%; }
+	.columns-2 .feature { width:48%; }
+	.columns-3 .feature { width:30.66%; }
+	.columns-4 .feature { width:22%; }
+	.columns-5 .feature { width:16.8%; }
+	.columns-6 .feature { width:13.33%; }
+	.features .first { clear: both; }
+	.features .last { margin-right: 0; }
+}

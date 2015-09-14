@@ -1,0 +1,13 @@
+/* **********************************************
+   Beaver Builder
+ ************************************************/
+
+// create CSS overlay for rows with .pattern-overlay class
+ .fl-row.pattern-overlay .fl-row-content-wrap {
+ 	@include pattern-overlay;
+}
+
+// fix BB's width
+.fl-row-fixed-width {
+    max-width: 1100px;
+}

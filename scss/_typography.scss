@@ -1,0 +1,44 @@
+/* =Typography
+-------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6, .heading {
+	@include clearfix;
+	clear: both;
+	float: none;
+	line-height: 1.25em;
+	margin-bottom: 1.625em;
+	text-transform: uppercase;
+	color: $heading-font-color; 
+	position: relative;
+	font-family: $title;
+	font-weight: bold;
+}
+h1 {
+	@include fontSize(36px);
+	margin: 0 0 0.7222em; 
+	line-height: 1.4444em; /* 52px */ 
+	top: 6px;
+}
+h2 {
+	@include fontSize(24px);
+	margin: 0 0 1.0833em; 
+	line-height: 1.0833em; /* 26px */ 
+	top: -2px;
+}
+h3 {
+	@include fontSize(21px);
+	margin: 0 0 1.2381em; 
+	line-height: 1.2381em; /* 26px */
+}
+h4 {
+	@include fontSize(18px);
+	margin: 0 0 1.4444em; 
+	line-height: 1.4444em; /* 26px */
+}
+h5 {
+	@include fontSize(16px);
+}
+h6 {
+	@include fontSize(14px);
+	margin: 0 0 1.8571em; 
+	line-height: 1.8571em; /* 26px */
+}
