@@ -189,22 +189,3 @@ function documentate_output_content_wrapper(){?>
 function documentate_output_content_wrapper_end(){?>
 </main>
 <?php }
-
-
-
-add_action( 'woocommerce_thankyou', 'so_32512552_payment_complete' );
-function so_32512552_payment_complete( $order_id ){
-    $order = wc_get_order( $order_id );
-
-    foreach ( $order->get_items() as $item ) {
-
-        if ( $item['product_id'] > 0 ) {
-		   $physical = array_shift( wc_get_product_terms( $item['product_id'], 'pa_physical_inventory', array( 'fields' => 'names' ) ) );
-		   $newphysical = intval( $physical ) - intval( $item['qty'] );
-
-		   wp_set_object_terms( $item['product_id'], (string) $newphysical, 'pa_physical_inventory' );
-
-		   update_post_meta( $item['product_id'], '_physical_inventory', $newphysical );
-        }
-    }
-}
